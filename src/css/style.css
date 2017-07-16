@@ -176,13 +176,13 @@ hr {
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes sticky_header {
-    from {top: -10%;}
+    from {top: -20%;}
     to {top: 0;}
 }
 
 /* Standard syntax */
 @keyframes sticky_header {
-    from {top: -10%;}
+    from {top: -20%;}
     to {top: 0;}
 }
 
@@ -193,7 +193,7 @@ hr {
 }
 
 .top_header_wrapper.sticky {
-    animation: sticky_header 1s ease;
+    animation: sticky_header 0.625s ease;
 }
 
 .contact {
@@ -1007,6 +1007,17 @@ select {
     .section_more_details .section-nav div.slick-slide {font-size: 10px; line-height: normal;}
     .section_details h2 {font-size: 18px; padding-bottom: 12px;}
     .section_details {padding-right: 0;}
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes sticky_header {
+        from {top: -10%;}
+        to {top: 0;}
+    }
+
+    /* Standard syntax */
+    @keyframes sticky_header {
+        from {top: -10%;}
+        to {top: 0;}
+    }
 }
 
 @media only screen and (max-width: 767px) {
