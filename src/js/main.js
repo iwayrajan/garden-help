@@ -1,3 +1,17 @@
+/******************************************Sticky Header*/
+var get_height_header = 1;
+setTimeout(function() {
+    get_height_header = $(".top_header_wrapper").outerHeight();
+});
+$(window).scroll(function() {
+if ($(this).scrollTop() > get_height_header){
+    $('.top_header_wrapper').addClass("sticky");
+  }
+  else{
+    $('.top_header_wrapper').removeClass("sticky");
+  }
+});
+/*******************************************************/
     $('.banner').slick({
       dots: true,
       infinite: true,
@@ -15,7 +29,7 @@
 
 
     /*******************************************/
-     
+
 
     $('.testimonials_slider').slick({
       dots: false,
@@ -41,13 +55,13 @@
 		}
         $(".sectionNav").removeClass('section-nav');
         var get_id = $(this).attr("id");
-        $("."+get_id).find('.sectionNav').addClass('section-nav');		
+        $("."+get_id).find('.sectionNav').addClass('section-nav');
         $("."+get_id).show();
         $(".services_open_container").show();
 		$('html, body').animate({
         scrollTop: $(".services_open_container").offset().top
     }, 1000);
-		
+
 		$('.section-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -59,7 +73,7 @@
       cssEase: 'ease',
       easing: 'linear'
     });
-	
+
     $('.section-nav').slick({
       slidesToShow: 8,
       slidesToScroll: 1,
@@ -68,7 +82,7 @@
       focusOnSelect: true,
       autoplay: false
     });
-		
+
     });
 
     /****************************************************How to Section*/
